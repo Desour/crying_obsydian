@@ -75,8 +75,8 @@ minetest.register_entity("crying_obsydian:ent", {
 		-- play sound
 		if not self.sound_handle then
 			-- todo: make this better
-			self.sound_handle = minetest.sound_play("crying_obsydian_cry",
-					{gain = 50.0, pitch = 1.2, loop = true})
+			self.sound_handle = minetest.sound_play("crying_obsydian_cry" .. math.random(2),
+					{gain = 50.0, pitch = 1.0, loop = true})
 		end
 
 		-- move to target
